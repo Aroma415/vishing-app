@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شاشة التنبيه</title>
+  <style>
+    body {
+      background-color: #0B0F17;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .vishing-alert-container {
+      background-color: #260d12;
+      width: 100%;
+      max-width: 400px;
+      padding: 30px 20px;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      min-height: 700px;
+    }
+    .alert-top-section {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .warning-icon-circle {
+      width: 90px;
+      height: 90px;
+      background: rgba(239, 68, 68, 0.15);
+      border: 2px solid rgba(239, 68, 68, 0.4);
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+    .alert-top-section h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin: 0 0 10px 0;
+    }
+    .alert-subtitle {
+      font-size: 13px;
+      color: #CBD5E1;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .action-guide-card {
+      background: #111827;
+      border: 1px solid #1F2937;
+      border-radius: 20px;
+      padding: 18px;
+      margin: 20px 0;
+      text-align: right;
+    }
+    .action-guide-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #F8FAFC;
+      margin: 0 0 14px 0;
+    }
+    .action-guide-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .action-guide-card ul li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #E2E8F0;
+      margin-bottom: 10px;
+    }
+    .check-icon {
+      color: #34D399;
+      font-weight: bold;
+    }
+    .alert-bottom-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .alert-bottom-buttons button {
+      width: 100%;
+      padding: 14px;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      text-align: center;
+      border: none;
+    }
+    .btn-full-report {
+      background: #FF5A5F;
+      color: #FFFFFF;
+    }
+    .btn-close {
+      background: transparent;
+      border: 1px solid #4B5563;
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="vishing-alert-container">
+    <div class="alert-top-section">
+      <div class="warning-icon-circle">
+        <span class="exclamation-icon">⚠️</span>
+      </div>
+      <h2>تنبيه: احتمال احتيال عالٍ</h2>
+      <p class="alert-subtitle">المتصل يطلب رمز التحقق وينتحل صفة موظف بنك.</p>
+    </div>
+
+    <div class="action-guide-card">
+      <h3>ماذا تفعل الآن؟</h3>
+      <ul>
+        <li><span class="check-icon">✓</span><span>لا تشارك رمز التحقق مع أحد</span></li>
+        <li><span class="check-icon">✓</span><span>أنهِ المكالمة فوراً</span></li>
+        <li><span class="check-icon">✓</span><span>تواصل مع البنك عبر الرقم الرسمي</span></li>
+      </ul>
+    </div>
+
+    <div class="alert-bottom-buttons">
+      <button class="btn-full-report">عرض التقرير الكامل</button>
+      <button class="btn-close">إغلاق</button>
+    </div>
+  </div>
+
+</body>
+</html>

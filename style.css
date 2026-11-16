@@ -1,0 +1,226 @@
+/* تنسيقات عامة للشاشتين */
+body {
+  background-color: #0B0F17;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 1. تنسيقات شاشة التنبيه الخطير */
+.vishing-alert-container {
+  background-color: #260d12;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.alert-top-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.warning-icon-circle {
+  width: 90px;
+  height: 90px;
+  background: rgba(239, 68, 68, 0.15);
+  border: 2px solid rgba(239, 68, 68, 0.4);
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.alert-top-section h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 10px 0;
+}
+
+.alert-subtitle {
+  font-size: 14px;
+  color: #CBD5E1;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.action-guide-card {
+  background: #111827;
+  border: 1px solid #1F2937;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 24px 0;
+  text-align: right;
+}
+
+.action-guide-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #F8FAFC;
+  margin: 0 0 16px 0;
+}
+
+.action-guide-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.action-guide-card ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #E2E8F0;
+  margin-bottom: 12px;
+}
+
+.action-guide-card ul li:last-child {
+  margin-bottom: 0;
+}
+
+.check-icon {
+  color: #34D399;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.alert-bottom-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.alert-bottom-buttons button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+}
+
+.btn-full-report {
+  background: #FF5A5F;
+  color: #FFFFFF;
+}
+
+.btn-close {
+  background: transparent;
+  border: 1px solid #4B5563;
+  color: #FFFFFF;
+}
+
+
+/* 2. تنسيقات شاشة السجل الكامل */
+.vishing-history-container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 20px 16px 80px 16px;
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.history-header {
+  margin-bottom: 20px;
+}
+
+.history-header h1 {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  color: #FFFFFF;
+}
+
+.filter-chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.filter-chips .chip {
+  background: #1E293B;
+  color: #94A3B8;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filter-chips .chip.active {
+  background: #0D9488;
+  color: #FFFFFF;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.history-item-card {
+  background: #111827;
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.call-details {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.call-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #F8FAFC;
+}
+
+.call-time {
+  font-size: 11px;
+  color: #64748B;
+  margin-top: 3px;
+}
+
+.badge {
+  padding: 5px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge.danger { 
+  background: #451A03; 
+  color: #F87171; 
+}
+
+.badge.warning { 
+  background: #422006; 
+  color: #FBBF24; 
+}
+
+.badge.safe { 
+  background: #064E3B; 
+  color: #34D399; 
+}

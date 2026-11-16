@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شاشة السجل</title>
+  <style>
+    body {
+      background-color: #0B0F17;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #FFFFFF;
+    }
+    .vishing-history-container {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px 16px;
+      box-sizing: border-box;
+      min-height: 700px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .history-header h1 {
+      font-size: 26px;
+      font-weight: 800;
+      margin: 0 0 16px 0;
+      color: #FFFFFF;
+      text-align: right;
+    }
+    .filter-chips {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+    }
+    .filter-chips .chip {
+      background: #1E293B;
+      color: #94A3B8;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .filter-chips .chip.active {
+      background: #0D9488;
+      color: #FFFFFF;
+    }
+    .history-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-grow: 1;
+    }
+    .history-item-card {
+      background: #111827;
+      border-radius: 16px;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+    .call-details {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+    }
+    .call-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #F8FAFC;
+    }
+    .call-time {
+      font-size: 11px;
+      color: #64748B;
+      margin-top: 3px;
+    }
+    .badge {
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .badge.danger { background: #451A03; color: #F87171; }
+    .badge.warning { background: #422006; color: #FBBF24; }
+    .badge.safe { background: #064E3B; color: #34D399; }
+
+    .bottom-nav {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 15px;
+      border-top: 1px solid #1E293B;
+      margin-top: 20px;
+    }
+    .nav-item {
+      font-size: 13px;
+      color: #64748B;
+      font-weight: 600;
+    }
+    .nav-item.active {
+      color: #2DD4BF;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="vishing-history-container">
+    <div>
+      <div class="history-header">
+        <h1>السجل</h1>
+        <div class="filter-chips">
+          <span class="chip active">الكل</span>
+          <span class="chip">خطرة</span>
+          <span class="chip">مشبوهة</span>
+          <span class="chip">آمنة</span>
+        </div>
+      </div>
+
+      <div class="history-list">
+        <div class="history-item-card">
+          <div class="call-details">
+            <span class="call-title">مكالمة_بنك_3.01.mp3</span>
+            <span class="call-time">اليوم · 3:42 د</span>
+          </div>
+          <span class="badge danger">خطرة</span>
+        </div>
+
+        <div class="history-item-card">
+          <div class="call-details">
+            <span class="call-title">مكالمة_توصيل.wav</span>
+            <span class="call-time">أمس · 1:15 د</span>
+          </div>
+          <span class="badge warning">مشبوهة</span>
+        </div>
+
+        <div class="history-item-card">
+          <div class="call-details">
+            <span class="call-title">مكالمة_عائلية.m4a</span>
+            <span class="call-time">قبل يومين · 6:08 د</span>
+          </div>
+          <span class="badge safe">آمنة</span>
+        </div>
+
+        <div class="history-item-card">
+          <div class="call-details">
+            <span class="call-title">مكالمة_جوال_3.02.mp3</span>
+            <span class="call-time">قبل 3 أيام · 2:30 د</span>
+          </div>
+          <span class="badge danger">خطرة</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-nav">
+      <div class="nav-item">الرئيسية</div>
+      <div class="nav-item active">السجل</div>
+      <div class="nav-item">الإعدادات</div>
+    </div>
+  </div>
+
+</body>
+</html>
